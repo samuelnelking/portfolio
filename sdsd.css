@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+    --gold: #d4af37;
+    --ink: #11110f;
+    --paper: #f1efe8;
+    --muted: #706f69;
+    --line: rgba(17, 17, 15, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    width: min(1180px, calc(100% - 48px));
+    height: 86px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: min(1180px, calc(100% - 48px));
+    min-height: 620px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    align-items: center;
+    gap: 80px;
+}
+
+.eyebrow,
+.section-label {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: var(--gold);
+    margin-bottom: 26px;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(52px, 7vw, 92px);
+    line-height: 0.93;
+    letter-spacing: -5px;
+}
+
+.hero h1 span,
+.contact h2 span {
+    color: var(--gold);
+}
+
+.hero .intro {
+    max-width: 590px;
+    margin: 30px 0;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.button {
+    display: inline-flex;
+    padding: 14px 22px;
+    border: 1px solid var(--ink);
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+}
+
+.button-primary {
+    color: var(--paper);
+    background: var(--ink);
+}
+
+.button-outline {
+    background: transparent;
+}
+
+.section {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 110px 0;
+    border-top: 1px solid var(--line);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+
+.section-copy {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 70px;
+}
+
+.section-copy h2,
+.contact h2 {
+    margin: 0;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.section-copy > p {
+    margin-top: 5px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.project-card {
+    min-height: 310px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    color: var(--paper);
+    background: var(--ink);
+}
+
+.project-card:nth-child(2) {
+    background: #56533f;
+}
+
+.project-card:nth-child(3) {
+    color: var(--ink);
+    background: var(--gold);
+}
+
+.project-number {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+}
+
+.project-card h3 {
+    margin-top: auto;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.project-card p {
+    min-height: 44px;
+    margin: 0 0 24px;
+    opacity: 0.72;
+    font-size: 13px;
+}
+
+.project-card a {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+
+.contact-copy a {
+    display: inline-block;
+    margin-top: 35px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ink);
+    font-size: 18px;
+}
+
+.site-footer {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 28px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+}
+
+/* PROFILE PICTURE */
+.profile-wrap {
+    width: 290px;
+    text-align: center;
+    margin: auto;
+    flex-shrink: 0;
+}
+
+.profile {
+    width: 270px;
+    height: 270px;
+    border: 4px solid #d4af37;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    background: #141414;
+    box-shadow: 0 0 35px #d4af3750;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-caption {
+    margin-top: 18px;
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* MOBILE PHONE */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 70px 0;
+    }
+
+    .profile-wrap {
+        grid-row: 1;
+    }
+
+    .hero-content {
+        grid-row: 2;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-copy {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .site-header,
+    .hero,
+    .section,
+    .site-footer {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .site-header {
+        height: 72px;
+    }
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .section-copy h2,
+    .contact h2 {
+        letter-spacing: -2px;
+    }
+
+    .profile-wrap {
+        width: 220px;
+    }
+
+    .profile {
+        width: 205px;
+        height: 205px;
+    }
+
+    .site-footer {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
